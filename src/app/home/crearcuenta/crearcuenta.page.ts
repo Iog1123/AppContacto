@@ -14,9 +14,11 @@ export class CrearcuentaPage implements OnInit {
 nuevoUsuario: Usuarios = {
     nombre: '',
     email: '',
-    password: ''
+    password: '',
+    id : this.firestoreService.getIdSecurity()
 };
 
+private path= 'Usuarios/';
 
   constructor(private router: Router,private toastController: ToastController,public firestoreService: FirestoreService) { }
 
@@ -25,19 +27,12 @@ nuevoUsuario: Usuarios = {
 
   }
 
-
-
   registrarNuevaCuenta(){
-
-    const path= 'Usuarios/';
-    const id = this.firestoreService.getIdSecurity();
-    this.firestoreService.crearDato(this.nuevoUsuario,path,id)
+    this.firestoreService.crearDato(this.nuevoUsuario,this.path,this.nuevoUsuario.id)
     this.presentToast("El usuario ha sido registrado!")
     this.router.navigate(['/home']);
     
-    
   }
-
 
   async presentToast(message: string, duration?: number){
     const toast= await this.toastController.create({
