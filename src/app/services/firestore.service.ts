@@ -29,4 +29,8 @@ export class FirestoreService {
     const collection = this.database.collection(path)
     return collection.doc(id).update(data);
   }
+
+  getIdSecurity(){
+    return this.database.createId();
+  }
 }
