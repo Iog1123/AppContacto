@@ -5,7 +5,10 @@ export interface Usuarios{
     id: string;
 }
 
-export interface Contactos{
+export interface Contacto{
     nombre: string;
     fono: string;
+    idContacto:string;
+    idPropietario:string;
+
 }

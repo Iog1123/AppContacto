@@ -24,5 +24,15 @@
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
- 
+  <ion-list *ngFor="let contacto of Contactos">
+    <ion-item [routerLink]="">
+      <ion-avatar style="padding: 1px;">
+        <ion-img src="assets/icon/userIcon.png"></ion-img>
+      </ion-avatar>
+     <ion-label style="margin-left:10px ;">
+        <h2>nombre:  {{contacto.nombre}} </h2> 
+        <h3>fono:  {{contacto.fono}} </h3>         
+     </ion-label> 
+    </ion-item>
+  </ion-list>
 </ion-content>

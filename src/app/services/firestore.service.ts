@@ -33,4 +33,10 @@ export class FirestoreService {
   getIdSecurity(){
     return this.database.createId();
   }
+
+  getAllContactos<tipo>(path:string){
+    const collection = this.database.collection<tipo>(path);
+    return collection.valueChanges()
+
+  }
 }

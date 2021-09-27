@@ -26,7 +26,17 @@
   </ion-tabs>
 
 <div>
+  <ion-item style="text-align: center; color: #69a032d0; margin-left: 60px; margin-right: 60px; margin-top: 200px; margin-bottom: 20px;">
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="contactos.nombre"></ion-input>
+  </ion-item>
 
+  <ion-item style="text-align: center; color: #69a032d0; margin-left: 60px; margin-right: 60px; margin-top: 20px; margin-bottom: 20px;">
+    <ion-label position="floating">fono</ion-label>
+    <ion-input [(ngModel)]="contactos.fono"></ion-input>
+  </ion-item>
 </div>
- 
+ <div>
+  <ion-button style="margin-top: 40px;" color="success" shape="round" (click)="registrarContacto()">Registrar</ion-button>
+ </div>
 </ion-content>

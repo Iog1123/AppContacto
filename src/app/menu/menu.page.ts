@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Contacto } from 'src/app/models';
+import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuPage implements OnInit {
 
-  constructor() { }
+private path = '/contactos'
+
+Contactos : Contacto []= [];
+
+  constructor(public firestoreService: FirestoreService) { 
+  
+  }
 
   ngOnInit() {
+    this.getContactos();
+  }
+
+  getContactos(){
+    this.firestoreService.getAllContactos<Contacto>(this.path).subscribe( res => {
+    this.Contactos = res;
+    })
   }
 
 }
