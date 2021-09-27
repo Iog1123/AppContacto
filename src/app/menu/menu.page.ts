@@ -31,4 +31,6 @@ Contactos : Contacto []= [];
     this.firestoreService.deleteDato(this.path,contacto.idContacto);
   }
 
+  
+
 }

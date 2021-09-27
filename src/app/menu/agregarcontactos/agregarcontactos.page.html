@@ -5,12 +5,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding ion-text-center" color="ligth">
+  <div>
+    <ion-avatar style="margin-left: 120px; margin-top: 90px; width: 100px; height: 100px;">
+      <img src="assets/icon/agendaVerde.png">
+    </ion-avatar>
+  </div>
   <ion-tabs>
     <ion-tab-bar slot="bottom">
-      <ion-tab-button routerLink="/menu/agregarcontactos">
-        <ion-icon name="person-add-outline"></ion-icon>
-        <ion-label>Agregar contacto</ion-label>
-        <ion-badge>6</ion-badge>
+      <ion-tab-button routerLink="/menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-label>Volver a menu</ion-label>
       </ion-tab-button>
   
       <ion-tab-button routerLink="/menu/agregarcontactos">
@@ -26,7 +30,7 @@
   </ion-tabs>
 
 <div>
-  <ion-item style="text-align: center; color: #69a032d0; margin-left: 60px; margin-right: 60px; margin-top: 200px; margin-bottom: 20px;">
+  <ion-item style="text-align: center; color: #69a032d0; margin-left: 60px; margin-right: 60px; margin-top: 30px; margin-bottom: 20px;">
     <ion-label position="floating">Nombre</ion-label>
     <ion-input [(ngModel)]="contactos.nombre"></ion-input>
   </ion-item>
