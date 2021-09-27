@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title style="text-align: center;">Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center" color="ligth">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button routerLink="/menu/agregarcontactos">
+        <ion-icon name="person-add-outline"></ion-icon>
+        <ion-label>Agregar contacto</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button routerLink="/menu/agregarcontactos">
+        <ion-icon name="person-remove-outline"></ion-icon>
+        <ion-label>Eliminar contacto</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button routerLink="/menu/agregarcontactos">
+        <ion-icon name="repeat-outline"></ion-icon>
+        <ion-label>Modificar contacto</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+ 
+</ion-content>
