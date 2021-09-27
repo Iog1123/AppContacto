@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar color="success">
+    <ion-title style="text-align: center;">Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center" color="ligth">
+
+  <ion-avatar  style="height: 120px; width: 120px; margin-top:80px; margin-left: 3cm; margin-right: 3cm; margin-bottom: 100px;">
+    <img  src= "assets/img/userg2.png">
+  </ion-avatar>
+
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item style="text-align: center; color: #69a032d0; margin-left: 60px; margin-right: 60px; margin-top: 200px; margin-bottom: 20px;">
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item style="text-align: center; color: #69a032d0; margin-left: 60px; margin-right: 60px; margin-top: 20px; margin-bottom: 20px;">
+      <ion-label position="floating">contraseña</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-button style="margin-top: 30px;" color="success" shape="round" (click)="ingresar()">Login</ion-button>
+    
   </div>
+
+  <div style="margin-top: 300px;">
+    <a color="secondary" routerLink="/home/crearcuenta">Crear cuenta</a>
+  </div>
+  
 </ion-content>

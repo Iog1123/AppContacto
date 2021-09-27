@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title style="text-align: center;">Crea tu cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center" color="ligth">
+
+  <ion-avatar  style="height: 120px; width: 120px; margin-top:80px; margin-left: 3cm; margin-right: 3cm; margin-bottom: 50px;">
+    <img  src= "assets/img/userg2.png">
+  </ion-avatar>
+
+
+  <div id="container">
+    <ion-item style="text-align: center; color: #69a032d0; margin-left: 60px; margin-right: 60px; margin-top: 20px; margin-bottom: 20px;">
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item style="text-align: center; color: #69a032d0; margin-left: 60px; margin-right: 60px; margin-top: 20px; margin-bottom: 20px;">
+      <ion-label position="floating">email</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item style="text-align: center; color: #69a032d0; margin-left: 60px; margin-right: 60px; margin-top: 20px; margin-bottom: 20px;">
+      <ion-label position="floating">contraseña</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-button style="margin-top: 30px;" color="success" shape="round" (click)="registrarNuevaCuenta()">crear</ion-button>
+
+  </div>
+
+  
+</ion-content>
+
